@@ -1,0 +1,11 @@
+//
+//  Development.xcconfig
+//  Currency
+//
+//  Created by Rana Ijaz Ahmad on 09/12/2022.
+//
+
+BASE_URL = https:/$()/api.apilayer.com/
+APP_BUNDLE_ID = com.ijaz.currency.development
+APP_NAME = Currency Dev
+
