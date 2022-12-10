@@ -13,3 +13,8 @@ struct Currency: Codable {
     let base, date: String
     let rates: [String: Double]
 }
+
+struct CurrencySelected {
+    let fromCurrency, toCurrency: String
+    let fromValue, toValue: Double
+}
