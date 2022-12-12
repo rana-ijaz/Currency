@@ -11,4 +11,5 @@ let LISTINGS_KEY_CONSTANTS = ""
 
 struct API {
     static let CURRENCIES = "fixer/latest"
+    static let HISTORY = "fixer/timeseries?"
 }

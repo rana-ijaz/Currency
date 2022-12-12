@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol CurrencySelectionProtocol: class {
+protocol CurrencySelectionProtocol: AnyObject {
     func selectedCurrency(currency: String)
 }
 

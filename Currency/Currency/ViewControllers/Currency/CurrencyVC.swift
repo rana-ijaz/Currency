@@ -81,7 +81,13 @@ class CurrencyVC: UIViewController {
     }
     
     @IBAction func detailBtnClicked(_ sender: UIButton){
+        let vc = DetailsVC()
+        var params: [String: Any]
+        params = ["base": fromBtn.titleLabel?.text ?? "",
+                  "symbols": "\(String(describing: fromBtn.titleLabel?.text ?? "")),\(String(describing: toBtn.titleLabel?.text ?? ""))"]
         
+        vc.historyParams = params
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
 }

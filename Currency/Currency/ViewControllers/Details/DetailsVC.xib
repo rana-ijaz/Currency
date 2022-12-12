@@ -10,6 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsVC" customModule="Currency" customModuleProvider="target">
             <connections>
+                <outlet property="fromLbl" destination="4WU-aN-X4u" id="Jj9-SI-ubg"/>
+                <outlet property="tableView" destination="Qe1-zM-IwW" id="JP3-QK-aHF"/>
+                <outlet property="toLbl" destination="u41-nO-XDj" id="wwH-vW-Z87"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,12 +20,64 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oz3-Tb-oeT">
+                    <rect key="frame" x="20" y="79" width="51" height="35"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="arrowshape.backward.fill" catalog="system"/>
+                    <connections>
+                        <action selector="backBtnClicked:" destination="-1" eventType="touchUpInside" id="aXg-48-DkC"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Qe1-zM-IwW">
+                    <rect key="frame" x="0.0" y="159" width="393" height="659"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="er2-aN-DHf"/>
+                        <outlet property="delegate" destination="-1" id="Tam-Qm-FrQ"/>
+                    </connections>
+                </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frW-Uh-B4f">
+                    <rect key="frame" x="30" y="129" width="36" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WU-aN-X4u">
+                    <rect key="frame" x="233.66666666666666" y="129" width="39.333333333333343" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u41-nO-XDj">
+                    <rect key="frame" x="328" y="129" width="18.333333333333314" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Qe1-zM-IwW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4wQ-iI-i3S"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Qe1-zM-IwW" secondAttribute="bottom" id="7Sh-BU-3eD"/>
+                <constraint firstItem="Oz3-Tb-oeT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="JSU-lB-62K"/>
+                <constraint firstItem="Qe1-zM-IwW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="M88-4l-Zqs"/>
+                <constraint firstItem="u41-nO-XDj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="70" id="NNw-rJ-4ya"/>
+                <constraint firstItem="frW-Uh-B4f" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="QmL-rE-bar"/>
+                <constraint firstItem="u41-nO-XDj" firstAttribute="leading" secondItem="4WU-aN-X4u" secondAttribute="trailing" constant="55" id="cQ1-Qm-oUg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4WU-aN-X4u" secondAttribute="trailing" constant="120" id="dfj-v2-0hS"/>
+                <constraint firstItem="Oz3-Tb-oeT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="dmj-u5-7Iv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Qe1-zM-IwW" secondAttribute="trailing" id="gWm-bV-IfY"/>
+                <constraint firstItem="frW-Uh-B4f" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="70" id="hTT-my-2mz"/>
+                <constraint firstItem="4WU-aN-X4u" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="70" id="or3-o4-X3t"/>
+            </constraints>
             <point key="canvasLocation" x="94" y="20"/>
         </view>
     </objects>
     <resources>
+        <image name="arrowshape.backward.fill" catalog="system" width="128" height="104"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
