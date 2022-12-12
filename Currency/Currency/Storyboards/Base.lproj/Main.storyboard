@@ -37,7 +37,7 @@
                                     <action selector="interchangeBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aNz-ti-bdS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QH5-TE-sfA">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QH5-TE-sfA">
                                 <rect key="frame" x="62" y="118.66666666666669" width="90" height="35"/>
                                 <color key="backgroundColor" red="0.90622636536656476" green="0.79849510451863392" blue="0.91976243257522583" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -46,8 +46,11 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="arrow.down" catalog="system"/>
+                                <connections>
+                                    <action selector="currencyBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3ud-ey-yDA"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUe-aN-AP2">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MUe-aN-AP2">
                                 <rect key="frame" x="241" y="118.66666666666669" width="90" height="35"/>
                                 <color key="backgroundColor" red="0.90622636540000001" green="0.79849510450000005" blue="0.91976243260000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -56,6 +59,9 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="arrow.down" catalog="system"/>
+                                <connections>
+                                    <action selector="currencyBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vWE-Bp-oZC"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W6N-Db-YLx">
                                 <rect key="frame" x="62" y="173.66666666666666" width="90" height="34"/>

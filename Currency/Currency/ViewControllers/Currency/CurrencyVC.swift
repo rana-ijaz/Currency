@@ -15,6 +15,7 @@ class CurrencyVC: UIViewController {
     @IBOutlet weak var toTxt: UITextField!
 
     let currencyViewModel = CurrencyViewModel()
+    var selectedBtn: UIButton?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +59,22 @@ class CurrencyVC: UIViewController {
     }
     
     //MARK: - IBAction Methods
+    @IBAction func currencyBtnClicked(_ sender: UIButton){
+        let vc = CurrencySelectionVC()
+        let allCurrencies = Array(currencyViewModel.currency.rates.keys)
+        let sorted = allCurrencies.sorted()
+        vc.currenciesArr = sorted
+        if sender.tag == 1 {
+            selectedBtn = fromBtn
+        }
+        else if sender.tag == 2 {
+            selectedBtn = toBtn
+        }
+        vc.currentCurrency = selectedBtn?.titleLabel?.text ?? ""
+        vc.delegate = self
+        self.present(vc, animated: true)
+    }
+    
     @IBAction func interchangeBtnClicked(_ sender: UIButton){
         currencyViewModel.convert(from: toBtn.titleLabel?.text ?? "", to: fromBtn.titleLabel?.text ?? "")
         setValues()
@@ -68,7 +85,6 @@ class CurrencyVC: UIViewController {
     }
 
 }
-
 
 extension CurrencyVC: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -85,5 +101,13 @@ extension CurrencyVC: UITextFieldDelegate {
         print("textFieldShouldReturn")
         textField.resignFirstResponder();
         return true;
+    }
+}
+
+extension CurrencyVC: CurrencySelectionProtocol {
+    func selectedCurrency(currency: String) {
+        selectedBtn?.titleLabel?.text = currency
+        currencyViewModel.convert(from: fromBtn.titleLabel?.text ?? "", to: toBtn.titleLabel?.text ?? "")
+        setValues()
     }
 }

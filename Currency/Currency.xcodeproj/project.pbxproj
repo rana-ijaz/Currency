@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5031CAA29471B26003427C5 /* CurrencySelectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5031CA829471B26003427C5 /* CurrencySelectionVC.swift */; };
+		A5031CAB29471B26003427C5 /* CurrencySelectionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5031CA929471B26003427C5 /* CurrencySelectionVC.xib */; };
+		A5031CB0294740D2003427C5 /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5031CAE294740D2003427C5 /* CurrencyCell.swift */; };
+		A5031CB1294740D2003427C5 /* CurrencyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5031CAF294740D2003427C5 /* CurrencyCell.xib */; };
 		A5BFF3242943D3D3000389D1 /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A5BFF3212943D3D3000389D1 /* Development.xcconfig */; };
 		A5BFF3252943D3D3000389D1 /* Staging.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A5BFF3222943D3D3000389D1 /* Staging.xcconfig */; };
 		A5BFF3262943D3D3000389D1 /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A5BFF3232943D3D3000389D1 /* Production.xcconfig */; };
@@ -58,6 +62,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A5031CA829471B26003427C5 /* CurrencySelectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySelectionVC.swift; sourceTree = "<group>"; };
+		A5031CA929471B26003427C5 /* CurrencySelectionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencySelectionVC.xib; sourceTree = "<group>"; };
+		A5031CAE294740D2003427C5 /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
+		A5031CAF294740D2003427C5 /* CurrencyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyCell.xib; sourceTree = "<group>"; };
 		A5BFF3212943D3D3000389D1 /* Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		A5BFF3222943D3D3000389D1 /* Staging.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		A5BFF3232943D3D3000389D1 /* Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
@@ -120,6 +128,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A5031CAC29471B38003427C5 /* CurrencySelection */ = {
+			isa = PBXGroup;
+			children = (
+				A5031CA829471B26003427C5 /* CurrencySelectionVC.swift */,
+				A5031CA929471B26003427C5 /* CurrencySelectionVC.xib */,
+				A5031CAD294740A8003427C5 /* CurrencyCell */,
+			);
+			path = CurrencySelection;
+			sourceTree = "<group>";
+		};
+		A5031CAD294740A8003427C5 /* CurrencyCell */ = {
+			isa = PBXGroup;
+			children = (
+				A5031CAE294740D2003427C5 /* CurrencyCell.swift */,
+				A5031CAF294740D2003427C5 /* CurrencyCell.xib */,
+			);
+			path = CurrencyCell;
+			sourceTree = "<group>";
+		};
 		A5BFF31E2943D36E000389D1 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				A5BFF3552943D708000389D1 /* CurrencyVC.swift */,
+				A5031CAC29471B38003427C5 /* CurrencySelection */,
 			);
 			path = Currency;
 			sourceTree = "<group>";
@@ -261,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				A5BFF3712943EA81000389D1 /* Currency.plist */,
+				A5CFD3C12943833500C51D96 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -298,7 +327,6 @@
 				A5BFF3342943D422000389D1 /* Extensions */,
 				A5BFF3302943D422000389D1 /* Helpers */,
 				A5BFF3612943E50A000389D1 /* Network */,
-				A5CFD3C12943833500C51D96 /* Assets.xcassets */,
 				A5CFD3C62943833500C51D96 /* Info.plist */,
 			);
 			path = Currency;
@@ -431,8 +459,10 @@
 				A5BFF3242943D3D3000389D1 /* Development.xcconfig in Resources */,
 				A5BFF3722943EA81000389D1 /* Currency.plist in Resources */,
 				A5BFF3252943D3D3000389D1 /* Staging.xcconfig in Resources */,
+				A5031CB1294740D2003427C5 /* CurrencyCell.xib in Resources */,
 				A5CFD3C02943833200C51D96 /* Main.storyboard in Resources */,
 				A5BFF3262943D3D3000389D1 /* Production.xcconfig in Resources */,
+				A5031CAB29471B26003427C5 /* CurrencySelectionVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,10 +488,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5BFF3462943D422000389D1 /* Box.swift in Sources */,
+				A5031CAA29471B26003427C5 /* CurrencySelectionVC.swift in Sources */,
 				A5BFF3492943D423000389D1 /* String.swift in Sources */,
 				A5BFF35E2943D787000389D1 /* Currency.swift in Sources */,
 				A5BFF36A2943E50A000389D1 /* WebServiceApi.swift in Sources */,
 				A5BFF36C2943E50A000389D1 /* NetworkApi.swift in Sources */,
+				A5031CB0294740D2003427C5 /* CurrencyCell.swift in Sources */,
 				A5CFD3B92943833200C51D96 /* AppDelegate.swift in Sources */,
 				A5BFF36F2943E50A000389D1 /* NetworkConfig.swift in Sources */,
 				A5BFF3692943E50A000389D1 /* CurrencyServiceAPI.swift in Sources */,
